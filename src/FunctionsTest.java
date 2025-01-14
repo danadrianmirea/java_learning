@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 class FunctionsTest
 {
@@ -18,6 +19,11 @@ class FunctionsTest
         scanner.close(); 
     }
 
+    private static void SortData(ArrayList<Integer> data)
+    {
+        Collections.sort(data);
+    }
+
     private static void PrintData(ArrayList<Integer> data)
     {
         System.out.print("Array is: ");
@@ -31,6 +37,7 @@ class FunctionsTest
     {
         ArrayList<Integer> array = new ArrayList<>();
         ReadData(array);
+        SortData(array);
         PrintData(array);
     }
 }
