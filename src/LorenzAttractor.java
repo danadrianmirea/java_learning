@@ -31,7 +31,7 @@ public class LorenzAttractor {
         GL.createCapabilities();
         setupProjection();
 
-        glPointSize(5.0f);
+        glPointSize(10.0f);
 
         double lastTime = GLFW.glfwGetTime(); // Get the initial time
         double accumulator = 0.0;
@@ -84,7 +84,7 @@ public class LorenzAttractor {
     }
 
     private void render() {
-        // glClear(GL_COLOR_BUFFER_BIT);
+        // glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
         glClear(GL_DEPTH_BUFFER_BIT);
 
         glBegin(GL_POINTS);
